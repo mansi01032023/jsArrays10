@@ -1,0 +1,97 @@
+/* container section */
+.container {
+    padding: 35px;
+}
+
+.container__label {
+    padding: 50px;
+}
+
+#companyInput {
+    margin: 20px;
+}
+
+#modelInput {
+    margin: 20px 37px;
+}
+
+#memoryInput {
+    margin: 20px 22px;
+}
+
+#priceInput {
+    margin: 20px 42px;
+}
+
+#btn {
+    margin: 20px 46px;
+}
+/* table section */
+.container__table {
+    padding: 20px;
+}
+
+.container__table tr {
+    padding: 10px;
+}
+
+.container__table th {
+    padding: 20px;
+}
+
+.container__table td {
+    padding-left: 25px;
+}
+
+#error {
+    padding-left: 45px;
+}
+
+.container__ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.container__ul li {
+    padding-right: 20px;
+}
+/* bill table */
+#billTable {
+    padding: 20px 20px 0px 20px;
+}
+
+#billTable th {
+    padding-right: 40px;
+}
+
+#billTable td {
+    padding-right: 40px;
+}
+
+#total {
+    padding-left: 20px;
+}
+
+#stat {
+    padding: 20px;
+}
+/* filter table */
+#filterTable {
+    padding: 20px;
+}
+
+#filterTable tr {
+    padding: 10px;
+}
+
+#filterTable th {
+    padding: 20px;
+}
+
+#filterTable td {
+    padding-left: 25px;
+}
+/* color for error messages class */
+.em{
+    color:red;
+}

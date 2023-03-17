@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <!-- Container div -->
+    <div class="container">
+        <!-- Create -->
+        <h2 class="container__heading" id="form">Create</h2>
+        <form class="container__form">
+            <label for="company" class="container__label">Company</label>
+            <input type="text" id="companyInput">
+            <br>
+            <label for="model" class="container__label">Model</label>
+            <input type="text" id="modelInput">
+            <br>
+            <label for="memory" class="container__label">Memory</label>
+            <input type="number" id="memoryInput">
+            <br>
+            <label for="price" class="container__label">Price</label>
+            <input type="number" id="priceInput">
+            <br>
+            <button id="btn" onClick="create()">Add</button>
+        </form>
+        <p id="error" class="em"></p>
+        <hr>
+        <!-- Display -->
+        <h2>Display</h2>
+        <table class="container__table">
+            <thead>
+                <tr>
+                    <th id="selectCheckbox">Selection</th>
+                    <th>Company</th>
+                    <th>Model</th>
+                    <th>Memory(GB)</th>
+                    <th>Price(Rs)</th>
+                    <th>Quantity</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+        <hr>
+        <!-- Searching -->
+        <h2>Searching</h2>
+        <form class="container__searchForm" id="searchForm">
+            <select id="searchD" name="param" value="SelectField">
+                <option value="Select">--Select--</option>
+                <option value="Company">Company</option>
+                <option value="Model">Model</option>
+                <option value="Memory">Memory</option>
+                <option value="Price">Price</option>
+            </select>
+            <input type="text" id="searchInput">
+            <button id="searchBtn" onclick="searching()">Search</button>
+        </form>
+        <hr>
+        <!-- Sorting -->
+        <h2>Sorting</h2>
+        <form class="container__sortForm" id="sortForm">
+            <select id="sortD" onclick="sort()">
+                <option value="Select">--Sort--</option>
+                <option value="Ascending">Ascending</option>
+                <option value="Descending">Descending</option>
+            </select>
+            <select id="selectD" onclick="sort()">
+                <option value="Select">--Select--</option>
+                <option value="Company">Company</option>
+                <option value="Model">Model</option>
+                <option value="Memory">Memory</option>
+                <option value="Price">Price</option>
+            </select>
+        </form>
+        <hr>
+        <!-- Deletion -->
+        <h2>Deletion</h2>
+        <button onclick="deleteRow()">Delete</button>
+        <!-- Updation -->
+        <h2>Updation</h2>
+        <form id="updateForm">
+            <select id="updateD">
+            </select>
+            <input type="number" id="inputUpdateID">
+            <button onclick="update()">Update</button>
+        </form>
+        <p class="em" id="errorUpdate"></p>
+        <hr>
+        <!-- Bill Generation -->
+        <h2>Bill Generation</h2>
+        <form id="generateBill">
+            <select id="billD">
+            </select>
+            <input type="number" id="inputQuantity">
+            <button id="addbtn" onclick="billGenerationAdd()">Add</button>
+            <button id="billBtn" onclick="generateBill()">Generate Bill</button>
+        </form>
+        <p class="em" id="errorBill"></p>
+        <table id="billTable">
+            <thead>
+                <tr id="billRow">
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="billtbody">
+            </tbody>
+        </table>
+        <p id="stat">Total amount:</p>
+        <p id="total"></p>
+        <hr>
+        <!-- Prouct Rating -->
+        <h2>Product Rating</h2>
+        <form id="ratingForm">
+            <select id="prodD">
+
+            </select>
+            <select id="ratingD">
+                <option>--Select--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button onclick="rating()">Rate</button>
+        </form>
+        <hr>
+        <!-- Filter using range -->
+        <h2>Filter using range</h2>
+        <form id="filterForm">
+            <input type="number" name="Minimum price" id="minp">
+            <input type="number" name="Maximum price" id="maxp">
+            <button onclick="rangeFilter()">Search</button>
+        </form>
+        <p id="errorMessage" class="em"></p>
+        <table id="filterTable">
+            <thead>
+                <tr>
+                    <th>Selection</th>
+                    <th>Company</th>
+                    <th>Model</th>
+                    <th>Memory(GB)</th>
+                    <th>Price(Rs)</th>
+                    <th>Quantity</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyFilter">
+            </tbody>
+        </table>
+
+
+
+    </div>
+</body>
+<script src="./JS/main.js"></script>
+
+</html>
